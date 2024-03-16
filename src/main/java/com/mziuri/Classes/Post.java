@@ -2,6 +2,7 @@ package com.mziuri.Classes;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
@@ -11,6 +12,7 @@ import java.util.List;
 @Table(name = "posts")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,12 +20,10 @@ public class Post {
     private Date date;
     private String image;
     private String text;
-    @OneToMany(targetEntity = Comment.class)
-    private List<Comment> comments;
 
-    public void addComment(String text){
-        Comment comment=new Comment();
-        comment.setComment(text);
-        comments.add(comment);
+    public Post(Date date, String image, String text) {
+        this.date = date;
+        this.image = image;
+        this.text = text;
     }
 }

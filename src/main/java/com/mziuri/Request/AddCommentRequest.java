@@ -12,13 +12,13 @@ import lombok.Setter;
 public class AddCommentRequest {
     private String text;
     private Comment comment;
-    private Post post;
+    private int postId;
 
     public AddCommentRequest(String text, String postId) {
         this.text = text;
+        this.postId=Integer.parseInt(postId);
+
         this.comment=new Comment();
         this.comment.setComment(text);
-        DatabaseReader reader=DatabaseReader.getReader();
-        this.post=reader.findPost(Integer.parseInt(postId));
     }
 }
