@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mziuri.Classes.Comment;
 import com.mziuri.Classes.Post;
+import com.mziuri.Response.GetPostsResponse;
 import com.mziuri.Service.DatabaseReader;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -15,42 +16,55 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws JsonProcessingException {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("unit");
-        EntityManager manager=factory.createEntityManager();
-        manager.getTransaction().begin();
-//
-//        Comment comment =new Comment();
-//        comment.setComment("sagasdfhgahrharh11324131244444444444444444444444433");
+        ObjectMapper mapper=new ObjectMapper();
+//        EntityManagerFactory factory = Persistence.createEntityManagerFactory("unit");
+//        EntityManager manager=factory.createEntityManager();
+//        manager.getTransaction().begin();
+
+
+
 //
 //        Comment comment1 =new Comment();
-//        comment1.setComment("111111111111111111111111111");
+//        comment1.setComment("comment text 4 for 2");
+//        comment1.setPost(post);
 //
-//        List<Comment> comments=new ArrayList<>();
-//        comments.add(comment);
-//        comments.add(comment1);
-//
-//        Post post=new Post();
-//        post.setComments(comments);
-//        post.setDate(new Date());
-//        post.setText("sdfgdsjfghds kjgrh 34444444444444444444444444123333333333333333333333333333");
 //
 //        manager.persist(comment);
-//        manager.persist(comment1);
 //        manager.persist(post);
+//        manager.persist(comment1);
+
+
+
+
+//
+//        DatabaseReader reader=DatabaseReader.getReader();
+//
+//        Post post=reader.findPost(102);
+//        System.out.println(mapper.writeValueAsString(post));
+//        System.out.println(mapper.writeValueAsString(reader.findComments(post)));
+
+//
+//
+//
+//        manager.getTransaction().commit();
+//        manager.close();
+//        factory.close();
 
         DatabaseReader reader=DatabaseReader.getReader();
-        Post post=reader.findPost(2);
 
-        post.addComment("dfkjgasdfjkhasgdfkjhas");
-//        manager
-        manager.persist(post);
+//        Post post=new Post();
+//        post.setDate(new Date());
+//        post.setText("text post 3");
+//
+//        Comment comment =new Comment();
+//        comment.setComment("comment text 5 for 3");
+//        comment.setPost(post);
 
-        ObjectMapper mapper=new ObjectMapper();
-        System.out.println(mapper.writeValueAsString(post));
+//        reader.addPost(post);
+//        reader.addComment(comment);
 
-        manager.getTransaction().commit();
-        manager.close();
-        factory.close();
-
+        GetPostsResponse response=new GetPostsResponse();
+        System.out.println(response.getList());
+        System.out.println(response.getString());
     }
 }
