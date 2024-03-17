@@ -9,11 +9,11 @@ import java.util.List;
 
 public class GetPostsResponse {
     private final DatabaseReader reader = DatabaseReader.getReader();
-    public List<Post> getList(){
+    public List<Post> getResultList(){
         return reader.findPosts();
     }
-    public String getString() throws JsonProcessingException {
+    public String getResultString() throws JsonProcessingException {
         ObjectMapper mapper=new ObjectMapper();
-        return mapper.writeValueAsString(getList());
+        return mapper.writeValueAsString(getResultList());
     }
 }

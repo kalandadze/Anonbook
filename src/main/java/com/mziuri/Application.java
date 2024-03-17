@@ -18,7 +18,7 @@ public class Application {
         tomcat.setPort(8989);
         tomcat.getConnector();
 
-        String ctxPath = "/candy-shop";
+        String ctxPath = "/anon-book";
         String webappDir = new File("src/main/webapp").getAbsolutePath();
         StandardContext ctx = (StandardContext) tomcat.addWebapp(ctxPath, webappDir);
 
