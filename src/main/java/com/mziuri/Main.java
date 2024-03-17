@@ -16,7 +16,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws JsonProcessingException {
-        ObjectMapper mapper=new ObjectMapper();
+//        ObjectMapper mapper=new ObjectMapper();
 //        EntityManagerFactory factory = Persistence.createEntityManagerFactory("unit");
 //        EntityManager manager=factory.createEntityManager();
 //        manager.getTransaction().begin();
@@ -50,7 +50,7 @@ public class Main {
 //        manager.close();
 //        factory.close();
 
-        DatabaseReader reader=DatabaseReader.getReader();
+//        DatabaseReader reader=DatabaseReader.getReader();
 
 //        Post post=new Post();
 //        post.setDate(new Date());
@@ -63,8 +63,8 @@ public class Main {
 //        reader.addPost(post);
 //        reader.addComment(comment);
 
-        GetPostsResponse response=new GetPostsResponse();
-        System.out.println(response.getList());
-        System.out.println(response.getString());
+//        GetPostsResponse response=new GetPostsResponse();
+//        System.out.println(response.getList());
+//        System.out.println(response.getString());
     }
 }

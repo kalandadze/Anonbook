@@ -23,4 +23,11 @@ public class AddPostRequest {
         this.post.setImage(image);
         this.post.setDate(new Date());
     }
+    public AddPostRequest(String text) {
+        this.text = text;
+
+        this.post = new Post();
+        this.post.setText(text);
+        this.post.setDate(new Date());
+    }
 }

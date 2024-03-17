@@ -7,9 +7,9 @@ import lombok.Setter;
 @Setter
 @Getter
 public class GetPostCommentsRequest {
-    private Post post;
+    private String postId;
 
-    public GetPostCommentsRequest(Post post) {
-        this.post = post;
+    public GetPostCommentsRequest(String postId) {
+        this.postId = postId;
     }
 }
