@@ -8,6 +8,18 @@
 	<title>Title</title>
 </head>
 <body>
-
+	<div class="container" id="anonbook">
+		<h1><a href="http://localhost:8989/anon-book/">ANONBOOK</a></h1>
+	</div>
+	<div class="posts" id="post">
+		<p class="bio" id="post_id"></p><p class="bio" id="date"></p>
+		<p id="text"></p>
+	</div>
+	<form>
+		<input type="text" id="prod_text" name="text">
+		<input type="button" value="Add" onclick="add()" id="btn">
+	</form>
+	<h3>Comments:</h3>
+	<ul id="comments"></ul>
 </body>
 </html>

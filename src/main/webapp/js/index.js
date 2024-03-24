@@ -4,11 +4,11 @@ async function startUp() {
     const posts = await response.json();
     console.log(posts);
     for (var i = 0; i < posts.length; i++) {
-        console.log(posts[i]);
         addPost(posts[i]);
     }
 }
 function addPost(post) {
+    console.log(post)
     var div = document.createElement("div");
     div.className = "posts";
 
@@ -28,7 +28,7 @@ function addPost(post) {
     div.appendChild(dateEl);
     div.appendChild(textEl);
     div.onclick=function(){
-        seePost(post.id)
+        seePost(post)
     }
     if (post.image != null) {
         var image = document.createElement("img");
@@ -39,8 +39,11 @@ function addPost(post) {
     document.body.appendChild(div);
 }
 
-function seePost(postId){
-
+async function seePost(post){
+    var newWindow=window.open("http://localhost:8989/anon-book/post.html", windowname="N"+post.id);
+    newWindow.onload = function(){
+        newWindow.postMessage(post,"*");
+    }
 }
 
 function addPostWindow() {
