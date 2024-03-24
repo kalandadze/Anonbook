@@ -34,3 +34,18 @@ a:link, a:visited, a:active, a:hover {
 img{
     width: 100%;
 }
+body{
+    text-align: center;
+}
+#btn{
+    background-color: transparent;
+    border: 2px solid rgb(149, 154, 197);
+    cursor: pointer;
+}
+#prod_text{
+    background-color: rgb(245, 245, 245);
+    border: 2px solid rgb(165, 165, 165);
+}
+input{
+    margin: 0 -2px !important;
+}
