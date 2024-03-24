@@ -1,0 +1,55 @@
+#photo {
+    background-color: transparent;
+}
+
+#photo::file-selector-button {
+    border: 2px solid rgb(165, 165, 165);
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: rgb(245, 245, 245);
+    transition: 1s;
+    border-radius: 5px;
+    width: 60%;
+}
+
+#photo::file-selector-button:hover {
+    cursor: pointer;
+}
+
+input, textarea {
+    padding-bottom: 5px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type=submit] {
+    width: 50%;
+    height: 30px;
+    text-align: center;
+    border: 2px solid rgb(149, 154, 197);
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+}
+
+#subm {
+    text-align: center;
+}
+
+#main {
+    border: 2px solid rgb(149, 154, 197);
+    padding: 10px;
+}
+
+textarea {
+    background-color: rgb(245, 245, 245);
+    border: 2px solid rgb(165, 165, 165);
+}
