@@ -32,11 +32,11 @@ public class PostServlet extends HttpServlet {
         String fileName = getFileName(imagePart);
         String uploadPath = getServletContext().getRealPath("") + File.separator + "images";
         String url = uploadPath + File.separator + fileName;
-        imagePart.write(url);
         AddPostRequest request;
         if (fileName.isEmpty()) {
             request = new AddPostRequest(text);
         } else {
+            imagePart.write(url);
             url = "images/" + fileName;
             request = new AddPostRequest(text, url);
         }

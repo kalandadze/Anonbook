@@ -10,11 +10,11 @@
 <body>
     <div id="main">
         <h1>Add New Post</h1><br>
-        <form method="post" action="post" onsubmit="save()" enctype="multipart/form-data">
+        <form method="post" action="post" enctype="multipart/form-data">
             <textarea id="text" name="text" rows="4" cols="50"></textarea><br>
             <input type="file" id="image" name="filename" accept="image/png, image/jpeg"><br>
             <div id="subm">
-                <input type="submit" value="Submit" id="btn">
+                <input type="submit" onclick="save()" value="Submit" id="btn">
             </div>
         </form>
     </div>
