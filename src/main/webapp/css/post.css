@@ -1,0 +1,5 @@
+a:link, a:visited, a:active, a:hover {
+    color: white !important;
+    background-color: transparent;
+    text-decoration: none !important;
+}

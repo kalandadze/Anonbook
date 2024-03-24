@@ -1,28 +1,43 @@
-#anonbook{
+#anonbook {
     background-color: rgb(65, 75, 178);
     color: white;
     text-align: center;
 }
-#anonbook h1{
+
+#anonbook h1 {
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
 }
+
 #main {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-div{
+
+div {
     margin-bottom: 25px;
 }
-.bio{
+
+.bio {
     display: inline;
     color: gray;
     font-size: 11px;
 }
-.posts{
+
+.posts {
     margin: 10px 20%;
     padding: 15px;
     border: 1px solid rgb(207, 209, 235);
     word-wrap: break-word;
+    cursor: pointer;
+}
+
+a:link, a:visited, a:active, a:hover {
+    color: white !important;
+    background-color: transparent;
+    text-decoration: none !important;
+}
+img{
+    width: 100%;
 }
