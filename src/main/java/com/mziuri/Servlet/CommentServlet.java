@@ -28,6 +28,9 @@ public class CommentServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String text=req.getParameter("text");
         String postId=req.getParameter("post_id");
+        System.out.println(text);
+        System.out.println(postId);
+        postId=postId.replace("N","");
         AddCommentRequest request=new AddCommentRequest(text,postId);
         AddCommentResponse response=new AddCommentResponse(request);
         if(response.commit()){

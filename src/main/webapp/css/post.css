@@ -1,5 +1,36 @@
+#anonbook {
+    background-color: rgb(65, 75, 178);
+    color: white;
+    text-align: center;
+}
+
+#anonbook h1 {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+div {
+    margin-bottom: 25px;
+}
+
+.bio {
+    display: inline;
+    color: gray;
+    font-size: 11px;
+}
+
+.posts {
+    margin: 10px 20%;
+    padding: 15px;
+    border: 1px solid rgb(207, 209, 235);
+    word-wrap: break-word;
+}
+
 a:link, a:visited, a:active, a:hover {
     color: white !important;
     background-color: transparent;
     text-decoration: none !important;
+}
+img{
+    width: 100%;
 }
